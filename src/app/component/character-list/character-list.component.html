@@ -1,0 +1,11 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"> <a routerLink="/">Episode List </a></li>
+    <li class="breadcrumb-item active" aria-current="page">Character List</li>
+  </ol>
+</nav>
+<div class="m-4">
+  <div class="row">
+    <app-character-card *ngFor="let character of characterList" [characterUrl]="character" ></app-character-card>
+  </div>
+</div>

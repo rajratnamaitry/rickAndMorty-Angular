@@ -1,0 +1,16 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active" aria-current="page">Episode List</li>
+  </ol>
+</nav>
+<div class="container-fluid">
+  <nav aria-label="Page navigation example" *ngIf="pagination" >
+    <ul class="pagination">
+      <li class="page-item"><a class="page-link" *ngIf="pagination?.prev" (click)="goToPage(pagination?.prev)" >Previous</a></li>
+      <li class="page-item"><a class="page-link" *ngIf="pagination?.next" (click)="goToPage(pagination?.next)" >Next</a></li>
+    </ul>
+  </nav>
+  <div class="list-group">
+    <app-episode-card *ngFor="let episode of episodeList$ | async" [episode]="episode" ></app-episode-card>
+  </div>
+</div>
