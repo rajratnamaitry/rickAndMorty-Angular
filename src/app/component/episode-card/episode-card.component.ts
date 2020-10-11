@@ -4,8 +4,7 @@ import { IEpisode } from 'src/app/service/rick-and-morty-api.service';
 
 @Component({
   selector: 'app-episode-card',
-  templateUrl: './episode-card.component.html',
-  styleUrls: ['./episode-card.component.css']
+  templateUrl: './episode-card.component.html'
 })
 export class EpisodeCardComponent implements OnInit {
   @Input() episode : IEpisode[] = []
