@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
   selector: 'app-episode-list',
   templateUrl: './episode-list.component.html'  
 })
-export class EpisodeListComponent implements OnInit , OnDestroy {  
+export class EpisodeListComponent implements OnInit {  
   public episodeList$: Observable<IEpisode[]>; 
   public pagination: object;
   constructor(private _rickAndMorty: RickAndMortyApiService) { }
